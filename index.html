@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазины</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link 
@@ -18,46 +16,141 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a class="logo" href="">
-                <span>L</span>
-                <span>O</span>
-                <span>G</span>
-                <span>O</span>
-            </a>
-            <div class="nav-toggle"><span></span></div>
-            <form action="" method="get" id="searchform">
-                <input type="text" placeholder="Искать на сайте...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <ul id="menu">
-                <li><a href="">Главная</a></li>
-                <li><a href="">Мои магазины</a></li>
-                <li><a href="">Промоматериалы</a></li>
-                <li><a href="">Статистика</a></li>
-                <li><a href="">Баланс</a></li>
-                <li><a href="">Персональные данные</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Техподдержка</a></li>
-                <li><a href="">Выход</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <aside>
-            <div class="widget">
-                <ul class="widget-category-list">
-                    <li><a href="">Дизайн</a> (2)</li>
-                    <li><a href="">Вёрстка</a> (5)</li>
-                    <li><a href="">Видео</a> (1)</li>
+    <div class="main-container">
+        <div class="sidebar">
+            <aside>
+                <div class="logo">
+                    <img src="./images/Logo Work5.png" />
+                </div>
+                <ul>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/home.png" /> 
+                            <div class="sidebar-text">Главная</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container selected">
+                            <img class="sidebar-img" src="./images/cart.png" />
+                            <div class="sidebar-text text-selected">Мои магазины</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/promo.png" />
+                            <div class="sidebar-text">Промоматериалы</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/stat.png" />
+                            <div class="sidebar-text">Статистика</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/wallet.png" />
+                            <div class="sidebar-text">Баланс</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/personal.png" />
+                            <div class="sidebar-text">Персональные данные</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/faq.png" />
+                            <div class="sidebar-text">FAQ</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/support.png" />
+                            <div class="sidebar-text">Техподдержка</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li-container">
+                            <img class="sidebar-img" src="./images/logout.png" />
+                            <div class="sidebar-text">Выход</div>
+                        </div>
+                    </li>
                 </ul>
+            </aside>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="row header-container">
+                    <div class="col-sm-5">
+                        <div class="path">Главная > Мои магазины</div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="user-container">
+                            <div class="messages"><img src="./images/message.png"/></div>
+                            <div class="userbox">
+                                <div class="col-sm-3"><img class="avatar" src="./images/photo.png" /></div>
+                                <div class="col-sm-9 username">Максим Добжанский</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-shop-button-container">
+                    <button class="new-shop-button">+ Создать свой магазин</button>
+                </div>
+                <div class="table-main-header">Управление магазинами</div>
+                <div class="container bg-light">
+                    <div class="row table-header">
+                        <div class="col-sm-1 header-item">№</div>
+                        <div class="col-sm-3 header-item">Название</div>
+                        <div class="col-sm-4 header-item">Адрес</div>
+                        <div class="col-sm-4 header-item">Действие</div>
+                    </div>
+                    <div class="row-container">
+                        <div class="row table-row">
+                            <div class="col-sm-1 row-element">12345</div>
+                            <div class="col-sm-3 row-element">Дипломная работа</div>
+                            <div class="col-sm-4 row-element">http://www.work5.ru/services</div>
+                            <div class="col-sm-4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button class="edit-accept">
+                                            <img class="button-image" src="./images/edit.png" />Редактировать
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="edit-cancel">
+                                            <img class="button-image" src="./images/cancel.png" />Редактировать
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-container">
+                        <div class="row table-row">
+                            <div class="col-sm-1 row-element">12345</div>
+                            <div class="col-sm-3 row-element">Дипломная работа</div>
+                            <div class="col-sm-4 row-element">http://www.work5.ru/services</div>
+                            <div class="col-sm-4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button class="edit-accept">
+                                            <img class="button-image" src="./images/edit.png" />Редактировать
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="edit-cancel">
+                                            <img class="button-image" src="./images/cancel.png" />Редактировать
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </aside>
+        </div>
     </div>
-    <script>
-        $('.nav-toggle').on('click', function(){
-            $('#menu').toggleClass('active');
-        });
-        </script>
 </body>
