@@ -6,6 +6,7 @@
     <title>Магазины</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
@@ -22,6 +23,49 @@
                 <div class="logo">
                     <img src="./images/Logo Work5.png" />
                 </div>
+                <div class="header-burger">
+                    <span></span>
+                </div>
+                <nav class="header-menu">
+                    <ul class="header-list">
+                        <li>
+                            <img class="sidebar-img" src="./images/home.png" />
+                            <a href="#" class="header-link">Главная</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/cart.png" />
+                            <a href="#" class="header-link">Мои магазины</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/promo.png" />
+                            <a href="#" class="header-link">Промоматериалы</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/stat.png" />
+                            <a href="#" class="header-link">Статистика</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/wallet.png" />
+                            <a href="#" class="header-link">Баланс</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/personal.png" />
+                            <a href="#" class="header-link">Персональные данные</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/faq.png" />
+                            <a href="#" class="header-link">FAQ</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/support.png" />
+                            <a href="#" class="header-link">Техподдержка</a>
+                        </li>
+                        <li>
+                            <img class="sidebar-img" src="./images/logout.png" />
+                            <a href="#" class="header-link">Выход</a>
+                        </li>
+                    </ul>
+                </nav>
                 <ul>
                     <li>
                         <div class="li-container">
@@ -82,10 +126,10 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 main-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                             <div class="path">Главная > Мои магазины</div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-5">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
                             <div class="row d-flex justify-content-end">
                                 <div class="col-3">
                                     <div class="messages"><img class="message-image" src="./images/message.png"/></div>
@@ -104,7 +148,9 @@
                     <div class="new-shop-container">
                         <div class="row">
                             <div class="col-12">
-                                <button class="new-shop-button">+ Создать свой магазин</button>
+                                <button class="new-shop-button" data-bs-toggle="modal" data-bs-target="#newShopModal">
+                                    + Создать свой магазин
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -118,24 +164,30 @@
                     <div class="container table-container">
                         <div class="row table-header">
                             <div class="col-1 header-item">№</div>
-                            <div class="col-3 col-md-2 header-item">Название</div>
-                            <div class="col-3 col-md-3 header-item">Адрес</div>
-                            <div class="col-5 col-md-6 header-item">Действие</div>
+                            <div class="col-3 col-sm-3 col-md-2 header-item">Название</div>
+                            <div class="col-4 col-sm-4 col-md-3 header-item">Адрес</div>
+                            <div class="col-4 col-sm-4 col-md-6 header-item">Действие</div>
                         </div>
                         <div class="row table-row">
                             <div class="col-1 row-element">12345</div>
-                            <div class="col-3 col-md-2 row-element">Дипломная работа</div>
-                            <div class="col-3 col-md-3 row-element">http://www.work5.ru/services</div>
-                            <div class="col-5 col-md-6">
+                            <div class="col-3 col-sm-3 col-md-2 row-element">Дипломная работа</div>
+                            <div class="col-4 col-sm-4 col-md-3 row-element">http://www.work5.ru/services</div>
+                            <div class="col-4 col-sm-4 col-md-6">
                                 <div class="row d-flex justify-content-start">
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-4 col-sm-4 col-md-5 col-lg-5 col-xl-5">
                                         <button class="edit-accept">
                                             <img class="button-image" src="./images/edit.png" />Редактировать
                                         </button>
+                                        <button class="edit-accept-mob">
+                                            <img class="button-image" src="./images/edit.png" />
+                                        </button>
                                     </div>
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-4 col-sm-4 col-md-5 col-lg-5 col-xl-5">
                                         <button class="edit-cancel">
                                             <img class="button-image" src="./images/cancel.png" />Редактировать
+                                        </button>
+                                        <button class="edit-cancel-mob">
+                                            <img class="button-image" src="./images/cancel.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -143,21 +195,109 @@
                         </div>
                         <div class="row table-row">
                             <div class="col-1 row-element">12345</div>
-                            <div class="col-3 col-md-2 row-element">Дипломная работа</div>
-                            <div class="col-3 col-md-3 row-element">http://www.work5.ru/services</div>
-                            <div class="col-5 col-md-6">
+                            <div class="col-3 col-sm-3 col-md-2 row-element">Дипломная работа</div>
+                            <div class="col-4 col-sm-4 col-md-3 row-element">http://www.work5.ru/services</div>
+                            <div class="col-4 col-sm-4 col-md-6">
                                 <div class="row d-flex justify-content-start">
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-4 col-sm-4 col-md-5 col-lg-5 col-xl-5">
                                         <button class="edit-accept">
                                             <img class="button-image" src="./images/edit.png" />Редактировать
                                         </button>
+                                        <button class="edit-accept-mob">
+                                            <img class="button-image" src="./images/edit.png" />
+                                        </button>
                                     </div>
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                    <div class="col-4 col-sm-4 col-md-5 col-lg-5 col-xl-5">
                                         <button class="edit-cancel">
                                             <img class="button-image" src="./images/cancel.png" />Редактировать
                                         </button>
+                                        <button class="edit-cancel-mob">
+                                            <img class="button-image" src="./images/cancel.png" />
+                                        </button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="newShopModal" tabindex="-1" aria-labelledby="newShopModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row popup-title">
+                            <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                                <h5 class="modal-title" id="newShopModalLabel">Создать магазин</h5>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container types">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <div class="select-label">Шаблон</div>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected>Стандартный</option>
+                                    <option value="2">Шаблон 1</option>
+                                    <option value="3">Шаблон 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <div class="select-label">Цветовая схема</div>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected>Классическая</option>
+                                    <option value="2">Темная</option>
+                                    <option value="3">Неон</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="domain-title">Домен</div>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-center justify-content-start">
+                            <div class="domain-container">
+                                <div class="domain-name-col">
+                                    <input type="text" class="domain-name" placeholder="Например: ivangrozniy" />
+                                </div>
+                                <div class="domain-col">
+                                    <div class="domain-text">.work5.ru</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container warning-container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <img src="./images/warning.png" />
+                            </div>
+                            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 wrap-text">
+                                В названии домена разрешены латиница и “-”, запрещается использовать 
+                                словосочетание Work 5. После создания магазина Вы сможете прикрутить 
+                                свой домен (например ivangrozniy.ru). 
+                                Подробнее по <span style="color: #6666cc;">ссылке</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container buttons">
+                        <div class="row d-flex justify-content-start align-items-center">
+                            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                <button class="cancel-btn">
+                                    Отмена
+                                </button>
+                            </div>
+                            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                <button class="create-btn">
+                                    Создать
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -169,5 +309,13 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
         crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.header-burger').click(function(event) {
+                $('.header-burger,.header-menu').toggleClass('active');
+                $('body').toggleClass('lock')
+            });
+        });
     </script>
 </body>
