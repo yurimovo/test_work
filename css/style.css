@@ -23,7 +23,7 @@ aside {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1440px;
+    height: 100vh;
     background-color: #f8faff;
     margin: 0 auto;
 }
@@ -283,7 +283,7 @@ aside {
         color: #7d7d7d;
     }
     .main-container {
-        max-width: 1150px;
+        width: 100%;
     }
 }
 @media (min-width: 1000px) and (max-width: 1199px) {
@@ -335,7 +335,7 @@ aside {
         height: 50px;
     }
     .main-container {
-        max-width: 980px;
+        width: 100%;
     }
 }
 @media (min-width: 768px) and (max-width: 999px) {
@@ -387,7 +387,7 @@ aside {
         height: 50px;
     }
     .main-container {
-        max-width: 750px;
+        width: 100%;
         flex-direction: column;
     }
     aside {
@@ -545,7 +545,7 @@ aside {
         height: 40px;
     }
     .main-container {
-        max-width: 750px;
+        width: 100%;
         flex-direction: column;
     }
     aside {
