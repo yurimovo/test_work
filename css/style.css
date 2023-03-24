@@ -243,7 +243,11 @@ aside {
     display: none;
 }
 
-
+@media (min-width: 1400px) {
+    .header-menu {
+        display: none;
+    }
+}
 @media (min-width: 1200px) and (max-width: 1399px) {
     .header-menu {
         display: none;
