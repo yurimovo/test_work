@@ -4,6 +4,9 @@
     margin: 0;
     transition: .5s ease-in-out;
 }
+body {
+    background-color: #f8faff;
+}
 ul {
     list-style: none;
 }
